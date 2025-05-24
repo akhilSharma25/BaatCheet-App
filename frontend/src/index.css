@@ -1,40 +1,3 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-.str-chat__channel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to bottom, #c9e8c9, #b7e7bb);
-  height: 100%;
-}
-
-.str-chat__container {
-  max-width: 1200px;
-  width: 100%;
-  height: 80% !important;
-  margin: 0 auto !important;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-}
-
-.str-chat__list {
-  background-color: #ffffff;
-  padding: 12px;
-}
-
-.str-chat__list-notifications {
-  display: none;
-}
-
-.str-chat__message-input {
-  border-top: 1px solid #ddd;
-} */
-
-
 /* src/styles/chat.css */
 @tailwind base;
 @tailwind components;
@@ -43,18 +6,16 @@
 .str-chat__channel {
   @apply flex items-center justify-center;
   background: linear-gradient(to bottom, #c9e8c9, #b7e7bb);
-  @apply h-full min-h-[400px]; /* Use full height of parent, with minimum */
+  @apply h-full min-h-[400px]; /* Full height of parent, with minimum */
 }
 
 .str-chat__container {
-  @apply w-full max-w-4xl mx-auto; /* Full width, max 1200px on PC */
-  height: 80vh; /* Default for PC */
-  @apply rounded-lg shadow-lg overflow-hidden;
-  margin: 0 auto !important;
+  @apply w-full max-w-5xl mx-auto h-[90vh] mt-1 mb-1; /* Centered, constrained width, slightly shorter height with margins */
+  @apply rounded-lg shadow-lg overflow-hidden; /* Polished radius and shadow */
 }
 
 .str-chat__list {
-  @apply bg-white p-3; /* Default padding */
+  @apply bg-white p-6; /* Increased padding for spacious feel */
 }
 
 .str-chat__list-notifications {
@@ -62,52 +23,70 @@
 }
 
 .str-chat__message-input {
-  @apply border-t border-gray-200 py-2; /* Default border and padding */
+  @apply border-t border-gray-200 py-4 text-base; /* More padding, readable text */
 }
 
-/* Adjustments for tablets (≤1024px) */
+.str-chat__header {
+  @apply text-lg; /* Slightly larger header for PC */
+}
+
+.str-chat__message {
+  @apply text-base; /* Readable message text */
+}
+
+/* * Adjustments for tablets (≤1024px) */ 
 @media (max-width: 1024px) {
   .str-chat__channel {
-    @apply p-2; /* Reduced padding */
+    @apply p-3; /* More padding for tablets */
   }
 
   .str-chat__container {
-    @apply h-[90vh] mx-2 rounded-md; /* More height, smaller margins */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    @apply h-[90vh] mx-4 rounded-lg w-full; /* Increased margins, larger radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
   }
 
   .str-chat__list {
-    @apply p-2; /* Reduced padding */
+    @apply p-3; /* Balanced padding */
   }
 
   .str-chat__message-input {
-    @apply py-3 text-sm; /* Larger touch target, smaller font */
+    @apply py-3 text-sm; /* Comfortable input size */
+  }
+
+  .str-chat__header {
+    @apply text-base; /* Readable header text */
+  }
+
+  .str-chat__message {
+    @apply text-sm; /* Readable message text */
   }
 }
 
 /* Adjustments for phones (≤640px) */
 @media (max-width: 640px) {
   .str-chat__channel {
-    @apply p-1; /* Minimal padding */
+    @apply p-2; /* Slightly more padding than before */
   }
 
   .str-chat__container {
-    @apply h-[95vh] mx-1; /* Maximize height, minimal margins */
+    @apply h-[92vh] mx-3 rounded-md w-full; /* Balanced margins, smaller radius */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   }
 
   .str-chat__list {
-    @apply p-1; /* Minimal padding */
+    @apply p-2; /* Moderate padding */
   }
 
   .str-chat__message-input {
-    @apply py-2 text-xs; /* Optimize for small screens */
+    @apply py-2 text-sm; /* Readable input text */
   }
 
   .str-chat__header {
-    @apply text-sm; /* Smaller header text */
+    @apply text-sm; /* Slightly smaller header */
   }
 
   .str-chat__message {
-    @apply text-xs; /* Smaller message text */
+    @apply text-sm; /* Readable message text */
   }
 }
+
