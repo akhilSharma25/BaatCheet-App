@@ -62,7 +62,7 @@ export async function signup(req, res) {
     res.cookie("jwt", token, {
       maxAge: 10 * 24 * 60 * 60 * 1000,
       httpOnly: true,
-      sameSite: "strict",
+  sameSite: "none",               
       secure: true,
     });
 
@@ -102,7 +102,7 @@ export async function login(req, res) {
     res.cookie("jwt", token, {
       maxAge: 10 * 24 * 60 * 60 * 1000,
       httpOnly: true,
-      sameSite: "strict",
+  sameSite: "none",               
       secure: true,
     });
 
