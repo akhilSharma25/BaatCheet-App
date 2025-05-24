@@ -63,6 +63,8 @@ const CallPage = () => {
         });
 
         const callInstance = videoClient.call("default", callId);
+              await navigator.mediaDevices.getUserMedia({ audio: true });
+
 
         await callInstance.join({ create: true });
 
