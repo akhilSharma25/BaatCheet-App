@@ -112,7 +112,7 @@ const Signup = () => {
                 </label>
               </div>
 
-              <button type='submit' className='btn btn-primary w-full'>
+              <button type='submit' className='btn btn-primary w-full cursor-pointer'>
 {isPending?<>
 <span className='loading loading-spinner loading-xs'>Loading...</span>
 
@@ -121,7 +121,7 @@ const Signup = () => {
 
               <p className='text-sm'>
                 Already have an account?{" "}
-                <Link to="/login" className="text-primary hover:underline">Log in</Link>
+                <Link to="/login" className="text-primary hover:underline cursor-pointer">Log in</Link>
               </p>
             </div>
           </form>
