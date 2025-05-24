@@ -35,7 +35,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 
-console.log("API user route prefix:", process.env.API_USER_PREFIX);
 
 
 // Connect DB first, then start server
