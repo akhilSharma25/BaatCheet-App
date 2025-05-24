@@ -40,6 +40,8 @@ export const getOutGoingFriendreq=async()=>{
 }
 export const sendFriendRequest=async(userId)=>{
     const res=await axiosInstance.post(`/user/friend-request/${userId}`,{});
+    console.log("Calling API:", `/user/friend-request/${userId}`);
+
       return res.data
 }
 export const getFriendRequests=async() =>{
@@ -54,3 +56,4 @@ export const getStreamToken=async(requestId) =>{
   const response = await axiosInstance.get(`/chat/token`);
   return response.data;
 }
+
