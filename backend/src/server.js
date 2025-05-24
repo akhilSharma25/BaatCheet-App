@@ -19,10 +19,11 @@ const __dirname = path.dirname(__filename);
 // CORS configuration
 app.use(
   cors({
-    origin: "https://baatcheet-app-1.onrender.com",
+    origin: "https://baatcheet-app-1.onrender.com",  // <-- your frontend origin here
     credentials: true,
   })
 );
+
 
       // process.env.NODE_ENV === "production"
       //   ? "https://baatcheet-ym27.onrender.com"
