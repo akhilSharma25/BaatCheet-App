@@ -13,7 +13,5 @@ router.put("/friend-request/:id/accept",acceptFriendRequest)
 
 router.get("/friend-requests",getFriendRequest)
 router.get("/outgoing-friend-requests",getOutgoingFriendRequest)
-router.get("/:id", (req, res) => {
-  res.send(`Invalid route with ID: ${req.params.id}`);
-});
+
 export default router
