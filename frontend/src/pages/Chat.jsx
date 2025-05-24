@@ -73,9 +73,12 @@ finally{
     initChat()
   },[tokenData,authUser,tagretUserId])
 
+  const BASE_URL = import.meta.env.VITE_APP_BASE_URL || window.location.origin;
+
+
    const handleVideoCall = () => {
     if (channel) {
-      const callUrl = `${window.location.origin}/call/${channel.id}`;
+      const callUrl = `${BASE_URL}/call/${channel.id}`;
 
       channel.sendMessage({
         text: `I've started a video call. Join me here: ${callUrl}`,
