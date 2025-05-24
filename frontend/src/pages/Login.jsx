@@ -91,7 +91,7 @@ const Login = () => {
 
             
 
-              <button type='submit' className='btn btn-primary w-full'>
+              <button type='submit' className='btn btn-primary cursor-pointer w-full'>
 {isPending?<>
 <span className='loading loading-spinner loading-xs'>Loading...</span>
 
