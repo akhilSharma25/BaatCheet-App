@@ -184,7 +184,7 @@ const Onboarding = () => {
           <button
             type="submit"
             disabled={isPending}
-            className="btn btn-primary w-full flex items-center justify-center gap-2"
+            className="btn btn-primary w-full  cursor-pointer flex items-center justify-center gap-2"
           >
             {!isPending ? (
               <>
