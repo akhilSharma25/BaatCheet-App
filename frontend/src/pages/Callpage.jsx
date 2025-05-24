@@ -33,9 +33,18 @@ const CallPage = () => {
     queryFn: getStreamToken,
     enabled: !!authUser,
   });
-
+  const requestMicPermission = async () => {
+  try {
+    await navigator.mediaDevices.getUserMedia({ audio: true });
+    console.log("Mic permission granted");
+  } catch (error) {
+    console.error("Mic permission denied:", error);
+    alert("Please enable microphone access for video call.");
+  }
+};
   useEffect(() => {
     const initCall = async () => {
+      await requestMicPermission()
       if (!tokenData.token || !authUser || !callId) return;
 
       try {
