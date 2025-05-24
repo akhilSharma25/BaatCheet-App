@@ -26,6 +26,11 @@ export const getAuthUser=async()=>{
     
    }
 }
+
+export const completeOnboarding = async (userData) => {
+  const response = await axiosInstance.post("/auth/onboarding", userData);
+  return response.data;
+};
 export const getUserFriends=async()=>{
     const res=await axiosInstance.get("/user/friends");
       return res.data
