@@ -8,6 +8,7 @@ export async function signup(req, res) {
     if (!email || !password || !fullname) {
       return res.status(400).json({ message: "All fields are required" });
     }
+    
 
     if (password.length < 6) {
       return res
@@ -77,6 +78,8 @@ export async function login(req, res) {
     if (!email || !password) {
       return res.status(400).json({ message: "All fields are required" });
     }
+          console.log("Email login",email)
+        console.log("Email login",password)
 
     const userExist = await User.findOne({ email });
     if (!userExist) {
