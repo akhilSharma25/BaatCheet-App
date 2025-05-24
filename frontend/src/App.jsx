@@ -13,6 +13,7 @@ import Layout from "./components/Layout.jsx";
 import NotificationsPage from "./pages/Notification.jsx";
 import FriendCard from "./pages/FriendCard.jsx";
 import ChatPage from "./pages/Chat.jsx";
+import FriendsPage from "./components/FriendPage.jsx";
 
 const App = () => {
   const { isLoading, authUser } = useAuthUser();
