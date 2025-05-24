@@ -20,7 +20,7 @@ const __dirname = path.dirname(__filename);
 app.use(
   cors({
     origin:      process.env.NODE_ENV === "production"
-        ? "https://baatcheet-ym27.onrender.com"
+        ? "https://baatcheet-app-1.onrender.com"
         : "http://localhost:5173",
 
     credentials: true,
