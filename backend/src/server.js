@@ -7,20 +7,23 @@ import { connectDB } from "./lib/db.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const __dirname = path.resolve();
+// Fix __dirname for ES module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // CORS configuration
 app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? "https://baatcheet-ym27.onrender.com" // Your Render URL
+        ? "https://baatcheet-ym27.onrender.com"
         : "http://localhost:5173",
-    credentials: true, // Allow cookies
+    credentials: true,
   })
 );
 
@@ -31,7 +34,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 
-
 // Serve frontend in production
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "frontend/dist")));
@@ -40,7 +42,16 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`Server is running on ${PORT}`);
-  connectDB();
-});
+// Connect DB first, then start server
+async function startServer() {
+  try {
+    await connectDB();
+    app.listen(PORT, () => {
+      console.log(`Server is running on ${PORT}`);
+    });
+  } catch (error) {
+    console.error("Failed to connect to DB", error);
+  }
+}
+
+startServer();
