@@ -73,7 +73,7 @@ finally{
     initChat()
   },[tokenData,authUser,tagretUserId])
 
-  const BASE_URL = import.meta.env.VITE_APP_BASE_URL || window.location.origin;
+  const BASE_URL ="https://baatcheet-app-1.onrender.com"
 
 
    const handleVideoCall = () => {
