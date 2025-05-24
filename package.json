@@ -3,23 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-<<<<<<< HEAD
   "main": "index.js",
   "type": "module",
-=======
->>>>>>> 9f9e5122649c5b9e1c2e584a05874233cd1489b9
   "scripts": {
     "install-all": "npm install --prefix frontend",
     "build": "npm run build --prefix frontend",
     "start": "node backend/src/server.js"
   },
-<<<<<<< HEAD
   "keywords": [],
   "author": "",
   "license": "ISC"
-=======
-  "dependencies": {
-    "express": "^4.18.2"
-  }
->>>>>>> 9f9e5122649c5b9e1c2e584a05874233cd1489b9
 }
