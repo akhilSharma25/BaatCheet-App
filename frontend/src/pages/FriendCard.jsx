@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { LANGUAGE_TO_FLAG } from "../constants/index.js";
 
 const FriendCard = ({ friend }) => {
-  console.log(friend);
+  // console.log(friend);
   
   return (
     <div className="card bg-base-100 shadow-sm hover:shadow-lg transition-shadow rounded-2xl">
