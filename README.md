@@ -1,6 +1,6 @@
 # BaatCheet App
 
-![BaatCheet App](./frontend/public/images/videocall.png)
+![BaatCheet App](./frontend/public/videocall.png)
 BaatCheet is a full-stack real-time chat application with video calling support, built using modern technologies. It offers secure user authentication, 1-to-1 messaging, video call invitations, and a clean, responsive UI.
 
 
