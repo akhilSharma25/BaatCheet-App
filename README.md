@@ -107,8 +107,8 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 - **Akhil Sharma**
   - [GitHub](https://github.com/akhilSharma25)
-  - [LinkedIn](#)
-  - [Portfolio](#)
+  - [LinkedIn](https://www.linkedin.com/in/akhil-sharma-61224024a/)
+  - [Portfolio](https://akhilsharma.onrender.com/)
 
 ---
 
